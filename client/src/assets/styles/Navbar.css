@@ -1,0 +1,66 @@
+.toggleBtn {
+  display: inline-block;
+  width: 100px;
+  height: 90px;
+  padding: 22px 25px;
+  background-color: #ffe63e;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  border-bottom-right-radius: 100px;
+  cursor: pointer;
+}
+.toggleBtn img {
+  position: absolute;
+}
+.toggleBtn img.close-icon {
+  opacity: 0;
+}
+
+/*MENU STYLE*/
+.menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 100%;
+  border-radius: 0 0 100% 0;
+  background-color: #ffe63e;
+  z-index: 9;
+  transform: scale(0);
+  transform-origin: top left;
+}
+nav {
+  padding: 100px;
+  transition: all ease 0.5s;
+}
+nav ul {
+  padding-left: 0;
+}
+nav ul li {
+  list-style: none;
+  margin-bottom: 30px;
+}
+nav ul li a {
+  position: relative;
+  font-family: Messapia;
+  font-size: 40px;
+  font-weight: 700;
+  text-decoration: none;
+  color: #38444b;
+}
+nav ul li a:before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: -100%;
+  width: 0;
+  height: 3px;
+  background-color: #38444b;
+  transition: all ease 0.5s;
+}
+nav ul li a:hover:before {
+  width: 100%;
+  left: 0;
+}

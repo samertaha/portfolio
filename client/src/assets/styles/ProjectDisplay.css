@@ -1,0 +1,29 @@
+.project {
+  width: 100%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.project h1 {
+  margin-top: 50px;
+  color: #ffe63e;
+  font-size: 35px;
+}
+.project img {
+  margin-top: 1rem;
+  width: 500px;
+  border-radius: 10px;
+}
+
+.project p {
+  font-size: 40px;
+  color: #ffe63e;
+}
+
+.project svg {
+  font-size: 60px;
+  color: #ffe63e;
+}
