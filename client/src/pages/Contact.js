@@ -41,7 +41,7 @@ const Contact = () => {
       <div class='form-box'>
         <form class='c-form' ref={form} onSubmit={sendEmail}>
           <fieldset>
-            <label className='c-form-label' for='user-name'>
+            <label className='c-form-label' htmlFor='user-name'>
               Name
             </label>
             <input
@@ -53,7 +53,7 @@ const Contact = () => {
           </fieldset>
 
           <fieldset>
-            <label className='c-form-label' for='user-email'>
+            <label className='c-form-label' htmlFor='user-email'>
               Email
             </label>
             <input
@@ -65,7 +65,7 @@ const Contact = () => {
           </fieldset>
 
           <fieldset>
-            <label className='c-form-label' for='user-message'>
+            <label className='c-form-label' htmlFor='user-message'>
               Message
             </label>
             <textarea name='message' id='user-message' class='c-form-input' />

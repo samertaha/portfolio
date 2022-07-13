@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 import GitHubIcon from '@material-ui/icons/GitHub';
+import LinkIcon from '@material-ui/icons/Link';
 import '../assets/styles/ProjectDisplay.css';
 import axios from 'axios';
 
@@ -13,6 +14,7 @@ function ProjectDisplay() {
       .get(`http://localhost:3001/getProject/${id}`)
       .then((response) => {
         setProject(response.data);
+        console.log(response.data);
       })
       .catch((error) => {});
   }, []);
@@ -26,6 +28,9 @@ function ProjectDisplay() {
       </p>
       <a href={project.github} target='_blank' rel='noreferrer'>
         <GitHubIcon />
+      </a>
+      <a href={project.url} target='_blank' rel='noreferrer'>
+        <LinkIcon />
       </a>
     </div>
   );

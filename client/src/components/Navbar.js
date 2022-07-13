@@ -60,6 +60,11 @@ function Navbar() {
                 Contact me
               </Link>
             </li>
+            <li>
+              <Link onClick={() => toggleBtn.current.click()} to='/admin'>
+                admin
+              </Link>
+            </li>
           </ul>
         </nav>
       </div>

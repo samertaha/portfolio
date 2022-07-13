@@ -7,6 +7,13 @@ import '../assets/styles/Home.css';
 
 function Home({ projects }) {
   useEffect(() => {
+    gsap.config({
+      autoSleep: 60,
+      force3D: false,
+      nullTargetWarn: false,
+      trialWarn: false,
+      units: { left: '%', top: '%', rotation: 'rad' },
+    });
     gsap.from('.text-inner > *', {
       duration: 1,
       opacity: 0,
@@ -55,28 +62,16 @@ function Home({ projects }) {
         <div className='img'>
           <div className='img-stripe stripe1'>
             {projects.map((project, index) => {
-              if (index <= projects.length / 2)
-                return (
-                  <img
-                    key={project.id}
-                    src={project.image}
-                    alt={project.name}
-                  />
-                );
-              else return <></>;
+              return (
+                <img key={project._id} src={project.image} alt={project.name} />
+              );
             })}
           </div>
           <div className='img-stripe stripe2'>
             {projects.map((project, index) => {
-              if (index >= projects.length / 2)
-                return (
-                  <img
-                    key={project.id}
-                    src={project.image}
-                    alt={project.name}
-                  />
-                );
-              else return <></>;
+              return (
+                <img key={project._id} src={project.image} alt={project.name} />
+              );
             })}
           </div>
         </div>
